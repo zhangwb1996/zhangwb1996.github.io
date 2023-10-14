@@ -46,8 +46,8 @@
    :maxdepth: 1
    :caption: nginx
 
-   my-notes/git/linux/nginx集群，反向代理.md
-   my-notes/git/linux/ssl.md
+   my-notes/nginx/nginx集群，反向代理.md
+   my-notes/nginx/ssl.md
 
 
 .. toctree::
