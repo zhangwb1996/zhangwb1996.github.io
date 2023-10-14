@@ -7,15 +7,59 @@
 =====================================
 
 .. toctree::
-   :maxdepth: 5
+   :hidden: 
+   :maxdepth: 1
+   :caption: C++程序设计语言
 
    my-notes/c++/c++程序设计语言/第6章 类型与声明/6.4 对象和值/6.4.2 对象的生命周期
+
+
+.. toctree::
+   :hidden: 
+   :maxdepth: 1
+   :caption: database
+
+   my-notes/database/mysql/mysql.md
+
+
+.. toctree::
+   :hidden: 
+   :maxdepth: 1
+   :caption: git
+
+   my-notes/git/git常用命令.md
+
+
+.. toctree::
+   :hidden: 
+   :maxdepth: 1
+   :caption: linux
+
+   my-notes/linux/常用命令.md
+   my-notes/linux/ubuntu/ubuntu设置虚拟内存
+   my-notes/linux/ubuntu/VM ubuntu 手动设置局域网ip
+   my-notes/linux/vi/vi常用快捷操作
+
+
+.. toctree::
+   :hidden: 
+   :maxdepth: 1
+   :caption: nginx
+
+   my-notes/git/linux/nginx集群，反向代理.md
+   my-notes/git/linux/ssl.md
+
+
+.. toctree::
+   :hidden: 
+   :maxdepth: 1
+   :caption: test
+
    my-notes/test/test
 
+.. Indices and tables
+.. ==================
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
