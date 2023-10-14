@@ -1,0 +1,34 @@
+# nginx集群 反向代理
+
+```c
+# nginx.conf
+http{
+
+ ...
+
+ upstream nacoscluster{
+  server localhost:8849;
+  server localhost:8850;
+  server localhost:8851;
+ }
+
+ upstream nacoscluster{
+  server 192.168.101.100:8848;
+  server 192.168.101.101:8848;
+  server 192.168.101.102:8848;
+ }
+
+ ...
+
+}
+
+# nacoslnvokerrcn
+server{
+ listen 8847;
+ server_name nacoslnvokerrcn;
+
+ location /nacos/{
+  proxy_pass http://nacoscluster/nacos/;
+ }
+}
+```
