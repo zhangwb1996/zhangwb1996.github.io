@@ -1,0 +1,3 @@
+# git常用命令
+
+`git log` : 显示commit 记录

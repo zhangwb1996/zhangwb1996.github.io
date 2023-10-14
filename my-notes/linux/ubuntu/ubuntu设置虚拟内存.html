@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ubuntu设置虚拟内存 &mdash; zhangwb1996.github.io  文档</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=7d86a446"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            zhangwb1996.github.io
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../c%2B%2B/c%2B%2B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/%E7%AC%AC6%E7%AB%A0%20%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%A3%B0%E6%98%8E/6.4%20%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%80%BC/6.4.2%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.html">对象的生命周期 p145</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">zhangwb1996.github.io</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ubuntu设置虚拟内存</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/my-notes/linux/ubuntu/ubuntu设置虚拟内存.md.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ubuntu">
+<h1>ubuntu设置虚拟内存<a class="headerlink" href="#ubuntu" title="Link to this heading"></a></h1>
+<p><a class="reference external" href="https://so.csdn.net/so/search?q=swap&amp;spm=1001.2101.3001.7020">swap</a>空间就是虚拟内存，在物理内存不足时，有较大的用处。查看<a class="reference external" href="https://so.csdn.net/so/search?q=%E5%86%85%E5%AD%98&amp;spm=1001.2101.3001.7020">内存</a>空间大小：free -m // m表示显示的字节单位是m（megabytes）</p>
+<p>下面我们就来增加系统的 Swap 大小。</p>
+<ol class="simple">
+<li><p><strong>首先用命令free查看系统内</strong> Swap 分区大小。<code class="docutils literal notranslate"><span class="pre">free</span> <span class="pre">-m</span></code>
+total used free shared buffers cachedMem: 1002 964 38 0 21 410-/+ buffers/cache: 532 470Swap: 951 32 929
+可以看到 Swap 只有951M，不符合 <a class="reference external" href="https://www.linuxidc.com/topicnews.aspx?tid=12">Oracle</a>-xe-client 的安装要求。</p></li>
+<li><p><strong>创建一个 Swap 文件</strong>。<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">swapcd</span> <span class="pre">swapsudo</span> <span class="pre">dd</span> <span class="pre">if=/dev/zero</span> <span class="pre">of=swapfile</span> <span class="pre">bs=1024</span> <span class="pre">count=100000</span></code>出现下列提示，上面命令中的 count 即代表swap文件大小。记录了 100000+0 的读入记录了 100000+0 的写出102400000 字节 (102 MB) 已复制，0.74704 秒，137 MB/秒。
+把生成的文件转换成 Swap 文件 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">mkswap</span> <span class="pre">swapfile。</span></code>
+Setting up swapspace version 1, size = 102395 kBno label, UUID=09fde987-5567-498a-a60b-477e302a988b</p></li>
+<li><p>激活 Swap 文件。 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">swapon</span> <span class="pre">swapfile</span></code></p></li>
+</ol>
+<p>再次查看 free -m 的结果。</p>
+<p>total used free shared buffers cachedMem: 1002 967 34 0 22 410-/+ buffers/cache: 534 467Swap: 1053 32 1021</p>
+<p>添加成功。</p>
+<p>扩展：如果需要卸载这个 swap 文件，可以进入建立的 swap 文件目录。执行下列命令。</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">swapoff</span> <span class="pre">swapfile</span></code></p>
+<p>如果需要一直保持这个 swap ，可以sudo -s换到root然后把它写入 /etc/fstab 文件。</p>
+<p><code class="docutils literal notranslate"><span class="pre">swapfilepath</span> <span class="pre">swap</span> <span class="pre">swap</span> <span class="pre">defaults</span> <span class="pre">0</span> <span class="pre">0</span></code></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2023, lnvokerr。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

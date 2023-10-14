@@ -1,0 +1,21 @@
+.. github.io documentation master file, created by
+   sphinx-quickstart on Sat Oct 14 21:56:40 2023.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+笔记
+=====================================
+
+.. toctree::
+   :maxdepth: 5
+
+   my-notes/c++/c++程序设计语言/第6章 类型与声明/6.4 对象和值/6.4.2 对象的生命周期
+   my-notes/test/test
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

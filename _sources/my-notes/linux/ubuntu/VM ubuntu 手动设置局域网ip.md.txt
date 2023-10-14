@@ -1,0 +1,26 @@
+# VM ubuntu 手动设置局域网ip
+
+1. 桥接
+2. 进入ubuntu 编辑 `/etc/netplan/00-installer-config.yaml` 或者 `/etc/netplan/01-network-manager-all.yaml`
+
+   * ```yaml
+     # Let NetworkManager manage all devices on this system
+     network:
+       ethernets:
+         ens33:（enp0s3:）# ifconfig网卡名称
+           dhcp4: false
+           dhcp6: false
+           addresses:
+             - 192.168.101.100/24
+           routes:
+             - to: 255.255.255.0/0
+             - via: 192.168.101.1 # ubuntu20
+               via: 192.168.101.1 # ubuntu22
+               metric: 100
+           nameservers:
+             addresses: [192.168.101.1,192.168.1.1]
+       version: 2
+       renderer: NetworkManager
+     ```
+
+3. **`sudo netplan apply`**
