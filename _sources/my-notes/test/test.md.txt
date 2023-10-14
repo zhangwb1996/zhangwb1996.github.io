@@ -1,3 +1,0 @@
-![svg](123.drawio.svg)
-
-![png](123.drawio.png)
