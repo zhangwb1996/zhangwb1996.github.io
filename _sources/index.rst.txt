@@ -9,6 +9,18 @@
 .. toctree::
    :hidden: 
    :maxdepth: 1
+
+   C++程序设计语言
+   database
+   git
+   linux
+   nginx
+   test
+
+
+.. toctree::
+   :hidden: 
+   :maxdepth: 1
    :caption: C++程序设计语言
 
    my-notes/c++/c++程序设计语言/第6章 类型与声明/6.4 对象和值/6.4.2 对象的生命周期
@@ -16,7 +28,7 @@
 
 .. toctree::
    :hidden: 
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: database
 
    my-notes/database/mysql/mysql.md
@@ -24,7 +36,7 @@
 
 .. toctree::
    :hidden: 
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: git
 
    my-notes/git/git常用命令.md
@@ -32,7 +44,7 @@
 
 .. toctree::
    :hidden: 
-   :maxdepth: 1
+   :maxdepth: 4
    :caption: linux
 
    my-notes/linux/常用命令.md
@@ -43,7 +55,7 @@
 
 .. toctree::
    :hidden: 
-   :maxdepth: 1
+   :maxdepth: 5
    :caption: nginx
 
    my-notes/nginx/nginx集群，反向代理.md
@@ -52,7 +64,7 @@
 
 .. toctree::
    :hidden: 
-   :maxdepth: 1
+   :maxdepth: 6
    :caption: test
 
    my-notes/test/test
