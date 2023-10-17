@@ -122,7 +122,7 @@
 <section id="id1">
 <h2>1、简介<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <p>本地仓库 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">remote···</span> </code>后，默认的 remote 仓库是没有源码的。我们可以使用 git hook 的 post_update 脚本来实现自动拉取源码。</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>仓库全是静态文件，可以实现<strong>本地代码 push 后，服务器自动更新静态页面。</strong></p></li>
 <li><p>仓库是动态程序代码，可以在 push 后（自动拉取源码）执行项目的编译，重启命令</p></li>
 </ol>
@@ -132,7 +132,7 @@
 <h2>2、流程<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
 <section id="remote-repo">
 <h3>2.1 配置远程仓库新建 remote-repo 仓库<a class="headerlink" href="#remote-repo" title="Link to this heading"></a></h3>
-<ol>
+<ol class="arabic">
 <li><p>远程仓库 remote-repo 和 target-repo</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># remote-repo</span>
 git<span class="w"> </span>init<span class="w"> </span>remote-repo<span class="w"> </span>--bare
@@ -172,7 +172,7 @@ git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </
 </section>
 <section id="local-repo">
 <h3>2.2 本地仓库 local repo<a class="headerlink" href="#local-repo" title="Link to this heading"></a></h3>
-<ol>
+<ol class="arabic">
 <li><p>修改.git/config 文件，添加新的 remote 配置</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>remote<span class="w"> </span><span class="s2">&quot;origin&quot;</span><span class="o">]</span>
 <span class="w">    </span><span class="c1"># 远程仓库的clone地址；如果远程仓库在本机，填相对路径或绝对路径</span>
@@ -215,7 +215,7 @@ git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </
 
   <div role="contentinfo">
     <p>&#169; 版权所有 2023, lnvokerr。
-      <span class="lastupdated">最后更新于 10月 17, 2023 23:42:58.
+      <span class="lastupdated">最后更新于 10月 17, 2023 23:58:32.
       </span></p>
   </div>
 

@@ -121,20 +121,20 @@
 <h1>对象的生命周期 p145<a class="headerlink" href="#p145" title="Link to this heading"></a></h1>
 <p>对象的生命周期从对象的 <code class="docutils literal notranslate"><span class="pre">构造函数完成</span></code>的那一刻开始，直到 <code class="docutils literal notranslate"><span class="pre">析构函数执行</span></code>为止。对于那些 <code class="docutils literal notranslate"><span class="pre">没有声明构造函数</span></code>的类型（比如 int），我们可以认为他们 <code class="docutils literal notranslate"><span class="pre">拥有默认的构造函数和析构函数</span></code>，并且 <code class="docutils literal notranslate"><span class="pre">两个函数不执行任何操作</span></code>。</p>
 <p>根据 <code class="docutils literal notranslate"><span class="pre">对象的生命周期</span></code>把对象化分为 <code class="docutils literal notranslate"><span class="pre">5</span></code>类：</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">自动（automatic）</span></code></strong> 对象：</p>
 <ul class="simple">
-<li><p>除非特别说明（2.1.8<a class="reference external" href="/">局部变量</a>和 16.2.12<a class="reference external" href="/">static 成员</a>），否则在 <code class="docutils literal notranslate"><span class="pre">函数中声明</span></code>的对象在其 <code class="docutils literal notranslate"><span class="pre">定义处被创建</span></code>，当 <code class="docutils literal notranslate"><span class="pre">超出作用范围时被销毁</span></code>。</p></li>
+<li><p>除非特别说明（2.1.8<a class="reference internal" href="#/"><span class="xref myst">局部变量</span></a>和 16.2.12<a class="reference internal" href="#/"><span class="xref myst">static 成员</span></a>），否则在 <code class="docutils literal notranslate"><span class="pre">函数中声明</span></code>的对象在其 <code class="docutils literal notranslate"><span class="pre">定义处被创建</span></code>，当 <code class="docutils literal notranslate"><span class="pre">超出作用范围时被销毁</span></code>。</p></li>
 <li><p>在大多数实现中，自动对象被分配在 <code class="docutils literal notranslate"><span class="pre">栈空间</span></code>上。</p></li>
 <li><p>每调用一次函数，获取新的 <code class="docutils literal notranslate"><span class="pre">帧栈（stack</span> <span class="pre">frame）</span></code>以存放它的自动对象。</p></li>
 </ul>
 </li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">静态（static）</span></code></strong> 对象：</p>
 <ul class="simple">
-<li><p>在 <code class="docutils literal notranslate"><span class="pre">全局作用域</span></code>或 <code class="docutils literal notranslate"><span class="pre">名字空间作用域</span></code>（<a class="reference external" href="/">6.3.4</a>）中生命的对象。</p></li>
-<li><p>在 <code class="docutils literal notranslate"><span class="pre">函数</span></code>（<a class="reference external" href="/">12.1.8</a>）或 <code class="docutils literal notranslate"><span class="pre">类</span></code>（<a class="reference external" href="/">16.2.12</a>）中声明的 <code class="docutils literal notranslate"><span class="pre">static成员</span></code>，只能 <code class="docutils literal notranslate"><span class="pre">被创建并初始化一次</span></code>，并且 <code class="docutils literal notranslate"><span class="pre">直到程序结束之前</span></code>都“活着”（<a class="reference external" href="/">15.4.3</a>）。</p></li>
+<li><p>在 <code class="docutils literal notranslate"><span class="pre">全局作用域</span></code>或 <code class="docutils literal notranslate"><span class="pre">名字空间作用域</span></code>（<a class="reference internal" href="#/"><span class="xref myst">6.3.4</span></a>）中生命的对象。</p></li>
+<li><p>在 <code class="docutils literal notranslate"><span class="pre">函数</span></code>（<a class="reference internal" href="#/"><span class="xref myst">12.1.8</span></a>）或 <code class="docutils literal notranslate"><span class="pre">类</span></code>（<a class="reference internal" href="#/"><span class="xref myst">16.2.12</span></a>）中声明的 <code class="docutils literal notranslate"><span class="pre">static成员</span></code>，只能 <code class="docutils literal notranslate"><span class="pre">被创建并初始化一次</span></code>，并且 <code class="docutils literal notranslate"><span class="pre">直到程序结束之前</span></code>都“活着”（<a class="reference internal" href="#/"><span class="xref myst">15.4.3</span></a>）。</p></li>
 <li><p>静态对象在程序的整个执行周期内 <code class="docutils literal notranslate"><span class="pre">地址唯一</span></code>。</p></li>
-<li><p>在多线程环境中，静态对象可能会造成意料之外的问题。以为 <code class="docutils literal notranslate"><span class="pre">所有线程都共享静态对象</span></code>，所以必须为其 **<code class="docutils literal notranslate"><span class="pre">加锁</span></code>**以避免数据竞争（<a class="reference external" href="/">5.3.1</a>和<a class="reference external" href="/">42.3</a>）。</p></li>
+<li><p>在多线程环境中，静态对象可能会造成意料之外的问题。以为 <code class="docutils literal notranslate"><span class="pre">所有线程都共享静态对象</span></code>，所以必须为其 **<code class="docutils literal notranslate"><span class="pre">加锁</span></code>**以避免数据竞争（<a class="reference internal" href="#/"><span class="xref myst">5.3.1</span></a>和<a class="reference internal" href="#/"><span class="xref myst">42.3</span></a>）。</p></li>
 </ul>
 </li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">自由存储(free</span> <span class="pre">store)</span></code></strong> 对象：</p>
@@ -156,7 +156,7 @@
 </li>
 </ul>
 </li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">线程局部（thread_load）</span></code></strong> 对象，或者说声明为 <code class="docutils literal notranslate"><span class="pre">thread_load</span></code>（<a class="reference external" href="/">42.2.8</a>）的对象：</p>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">线程局部（thread_load）</span></code></strong> 对象，或者说声明为 <code class="docutils literal notranslate"><span class="pre">thread_load</span></code>（<a class="reference internal" href="#/"><span class="xref myst">42.2.8</span></a>）的对象：</p>
 <ul class="simple">
 <li><p>这样的对象<strong>随着线程的创建而创建，随着线程的销毁而销毁</strong>。</p></li>
 </ul>
@@ -178,7 +178,7 @@
 
   <div role="contentinfo">
     <p>&#169; 版权所有 2023, lnvokerr。
-      <span class="lastupdated">最后更新于 10月 17, 2023 23:42:58.
+      <span class="lastupdated">最后更新于 10月 17, 2023 23:58:32.
       </span></p>
   </div>
 
