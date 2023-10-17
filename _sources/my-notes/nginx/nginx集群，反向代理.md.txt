@@ -1,6 +1,6 @@
-# nginx集群 反向代理
+# nginx 集群 反向代理
 
-```c
+```nginx
 # nginx.conf
 http{
 

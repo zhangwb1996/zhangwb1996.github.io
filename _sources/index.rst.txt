@@ -9,11 +9,6 @@
 .. toctree::
    :hidden: 
    :maxdepth: 1
-
-
-.. toctree::
-   :hidden: 
-   :maxdepth: 1
    :caption: C++程序设计语言
 
    my-notes/c++/c++程序设计语言/第6章 类型与声明/6.4 对象和值/6.4.2 对象的生命周期
@@ -33,6 +28,8 @@
    :caption: git
 
    my-notes/git/git常用命令.md
+   my-notes/git/git push 后，自动拉取仓库源码，自动部署.md
+
 
 
 .. toctree::
