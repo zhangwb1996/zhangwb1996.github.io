@@ -10,13 +10,6 @@
    :hidden: 
    :maxdepth: 1
 
-   C++程序设计语言
-   database
-   git
-   linux
-   nginx
-   test
-
 
 .. toctree::
    :hidden: 
