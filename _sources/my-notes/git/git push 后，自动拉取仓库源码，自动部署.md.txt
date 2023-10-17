@@ -19,7 +19,7 @@
    # remote-repo
    git init remote-repo --bare
    # target-repo
-   git clone remote-repo
+   git clone remote-repo target
    ls
    # remote-repo target-repo
    ```
@@ -41,7 +41,7 @@
    echo >&2 "fatal: post-receive: IS_NOT_BARE"
    exit 1
    fi
-   unset IS_BARE
+   unset GIT_DIR
    DeployPath="../target-repo" # 可以是相对路径，也可以是绝对路径
    cd $DeployPath
    git pull origin main # git pull <remote> <branch>
