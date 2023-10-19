@@ -150,10 +150,8 @@
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#html">生成静态 html</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#githubpagegithub-io">githubpage、github.io</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#id3">注意事项</a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="#githubpagegithub-io">githubpage、github.io</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">注意事项</a></li>
 </ul>
 </li>
 </ul>
@@ -360,8 +358,9 @@ touch<span class="w"> </span>my-notes/index.rst<span class="w"> 	</span><span cl
 <li><p>使用 git 管理 html 目录，并且关联至远程仓库 <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;.github.io</span> </code></p></li>
 <li><p>push</p></li>
 </ol>
+</section>
 <section id="id3">
-<h3>注意事项<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<h2>注意事项<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
 <ol class="arabic">
 <li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> 命令会将整个 build 目录（即包括 .nojekyll 文件和 .git 目录）；并且也会 为了避免这种情况，可以自己写一个脚本，手动删除。
 windows 的 bat 脚本 clean.bat 如下：</p>
@@ -389,7 +388,6 @@ windows 的 bat 脚本 clean.bat 如下：</p>
 <p>当我们需要重新<code class="docutils literal notranslate"><span class="pre">make</span></code>的时候，先执行<code class="docutils literal notranslate"><span class="pre">./clean</span></code>，再执行<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>，最后把 html 仓库推送到<code class="docutils literal notranslate"><span class="pre">&lt;username&gt;.github.io</span> </code></p>
 </li>
 </ol>
-</section>
 </section>
 </section>
 

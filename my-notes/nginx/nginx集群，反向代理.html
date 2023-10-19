@@ -193,35 +193,35 @@
              
   <section id="nginx">
 <h1>nginx 集群 反向代理<a class="headerlink" href="#nginx" title="Link to this heading"></a></h1>
-<div class="highlight-nginx notranslate"><div class="highlight"><pre><span></span><span class="c1"># nginx.conf</span>
-<span class="k">http{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># nginx.conf</span>
+<span class="n">http</span><span class="p">{</span>
 
-<span class="w"> </span><span class="s">...</span>
+ <span class="o">...</span>
 
-<span class="w"> </span><span class="s">upstream</span><span class="w"> </span><span class="s">nacoscluster</span><span class="p">{</span>
-<span class="w">  </span><span class="kn">server</span><span class="w"> </span><span class="n">localhost</span><span class="p">:</span><span class="mi">8849</span><span class="p">;</span>
-<span class="w">  </span><span class="kn">server</span><span class="w"> </span><span class="n">localhost</span><span class="p">:</span><span class="mi">8850</span><span class="p">;</span>
-<span class="w">  </span><span class="kn">server</span><span class="w"> </span><span class="n">localhost</span><span class="p">:</span><span class="mi">8851</span><span class="p">;</span>
-<span class="w"> </span><span class="p">}</span>
+ <span class="n">upstream</span> <span class="n">nacoscluster</span><span class="p">{</span>
+  <span class="n">server</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">8849</span><span class="p">;</span>
+  <span class="n">server</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">8850</span><span class="p">;</span>
+  <span class="n">server</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">8851</span><span class="p">;</span>
+ <span class="p">}</span>
 
-<span class="w"> </span><span class="k">upstream</span><span class="w"> </span><span class="s">nacoscluster</span><span class="p">{</span>
-<span class="w">  </span><span class="kn">server</span><span class="w"> </span><span class="n">192.168.101.100</span><span class="p">:</span><span class="mi">8848</span><span class="p">;</span>
-<span class="w">  </span><span class="kn">server</span><span class="w"> </span><span class="n">192.168.101.101</span><span class="p">:</span><span class="mi">8848</span><span class="p">;</span>
-<span class="w">  </span><span class="kn">server</span><span class="w"> </span><span class="n">192.168.101.102</span><span class="p">:</span><span class="mi">8848</span><span class="p">;</span>
-<span class="w"> </span><span class="p">}</span>
+ <span class="n">upstream</span> <span class="n">nacoscluster</span><span class="p">{</span>
+  <span class="n">server</span> <span class="mf">192.168.101.100</span><span class="p">:</span><span class="mi">8848</span><span class="p">;</span>
+  <span class="n">server</span> <span class="mf">192.168.101.101</span><span class="p">:</span><span class="mi">8848</span><span class="p">;</span>
+  <span class="n">server</span> <span class="mf">192.168.101.102</span><span class="p">:</span><span class="mi">8848</span><span class="p">;</span>
+ <span class="p">}</span>
 
-<span class="w"> </span><span class="k">...</span>
+ <span class="o">...</span>
 
-<span class="err">}</span>
+<span class="p">}</span>
 
 <span class="c1"># nacoslnvokerrcn</span>
-<span class="s">server</span><span class="p">{</span>
-<span class="w"> </span><span class="kn">listen</span><span class="w"> </span><span class="mi">8847</span><span class="p">;</span>
-<span class="w"> </span><span class="kn">server_name</span><span class="w"> </span><span class="s">nacoslnvokerrcn</span><span class="p">;</span>
+<span class="n">server</span><span class="p">{</span>
+ <span class="n">listen</span> <span class="mi">8847</span><span class="p">;</span>
+ <span class="n">server_name</span> <span class="n">nacoslnvokerrcn</span><span class="p">;</span>
 
-<span class="w"> </span><span class="kn">location</span><span class="w"> </span><span class="s">/nacos/</span><span class="p">{</span>
-<span class="w">  </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://nacoscluster/nacos/</span><span class="p">;</span>
-<span class="w"> </span><span class="p">}</span>
+ <span class="n">location</span> <span class="o">/</span><span class="n">nacos</span><span class="o">/</span><span class="p">{</span>
+  <span class="n">proxy_pass</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">nacoscluster</span><span class="o">/</span><span class="n">nacos</span><span class="o">/</span><span class="p">;</span>
+ <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
