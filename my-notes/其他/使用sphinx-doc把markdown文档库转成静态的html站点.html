@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>使用 sphinx-doc 把 markdown 文档库转成静态 html 站点 &mdash; zhangwb1996.github.io&lt;br&gt;lnvokerr&#39;s notes  文档</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/assets/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=7d86a446"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="About" href="../about.html" />
+    <link rel="prev" title="其他" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            zhangwb1996.github.io<br>lnvokerr's notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Notes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../c%2B%2B/index.html">c++</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../c%2B%2B/c%2B%2B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/index.html">c++程序设计语言</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../c%2B%2B/c%2B%2B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/%E4%BA%8C%E3%80%81C%2B%2B%E6%A6%82%E8%A7%88%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">二、C++概览：基础知识</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../c%2B%2B/c%2B%2B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/%E5%85%AD%E3%80%81%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%A3%B0%E6%98%8E/index.html">六、类型与声明</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../c%2B%2B/c%2B%2B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/%E5%85%AD%E3%80%81%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%A3%B0%E6%98%8E/6.3%20%E5%A3%B0%E6%98%8E/index.html">6.3 声明</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../c%2B%2B/c%2B%2B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/%E5%85%AD%E3%80%81%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%A3%B0%E6%98%8E/6.4%20%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%80%BC/index.html">6.4 对象和值</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../c%2B%2B/c%2B%2B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/%E5%85%AD%E3%80%81%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%A3%B0%E6%98%8E/6.4%20%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%80%BC/6.4.2%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.html">对象的生命周期 p145</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/index.html">database</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/mysql/index.html">mysql</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/mysql/mysql.html">配置 mysql 允许远程连接的方法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/pgsql/index.html">pgsql</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/redis/index.html">redis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../git/index.html">git</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html">git push 后，自动拉取仓库源码，自动部署</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#id1">1、简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#id2">2、流程</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#remote-repo">2.1 配置远程仓库新建 remote-repo 仓库</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#local-repo">2.2 本地仓库 local repo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html">git 常用命令</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../linux/index.html">linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../linux/ubuntu/index.html">ubuntu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../linux/ubuntu/VM%20ubuntu%20%E6%89%8B%E5%8A%A8%E8%AE%BE%E7%BD%AE%E5%B1%80%E5%9F%9F%E7%BD%91ip.html">VM ubuntu 手动设置局域网ip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../linux/ubuntu/ubuntu%E8%AE%BE%E7%BD%AE%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98.html">ubuntu设置虚拟内存</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../linux/vi/index.html">vi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../linux/vi/vi%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E6%93%8D%E4%BD%9C.html">vi常用快捷操作</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../linux/vi/vi%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E6%93%8D%E4%BD%9C.html#id1">输入模式</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../linux/vi/vi%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E6%93%8D%E4%BD%9C.html#id2">命令模式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html">常用命令</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html#id2">端口占用查询</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html#id3">用户和权限</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html#uer">uer</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html#useradd">useradd</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html#usermod">usermod</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html#userdel">userdel</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html#id4">权限</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html#chmod">chmod</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html#chown">chown</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../nginx/index.html">nginx</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nginx/nginx%E9%9B%86%E7%BE%A4%EF%BC%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.html">nginx 集群 反向代理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nginx/ssl.html">ssl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../nginx/ssl.html#id1">配置证书</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../nginx/ssl.html#http-https">HTTP 自动跳转 HTTPS 的安全配置（可选）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../nginx/ssl.html#id2">重启</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../test/index.html">test</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../test/test.html">test</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">其他</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">使用 sphinx-doc 把 markdown 文档库转成静态 html 站点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sphinx-doc">安装 sphinx-doc</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#python">安装 python</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#pypi-sphinx-doc">从 PyPI 安装 sphinx-doc</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#myst-parser">安装插件 myst_parser</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">快速开始</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">配置文件</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#source-conf-py">source/conf.py</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#index-rst">index.rst</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#html">生成静态 html</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#githubpagegithub-io">githubpage、github.io</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id3">注意事项</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html">About</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../%E6%9C%AC%E7%AB%99%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B.html">本站搭建流程</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">zhangwb1996.github.io<br>lnvokerr's notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Notes</a></li>
+          <li class="breadcrumb-item"><a href="index.html">其他</a></li>
+      <li class="breadcrumb-item active">使用 sphinx-doc 把 markdown 文档库转成静态 html 站点</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphinx-doc-markdown-html">
+<h1>使用 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#">sphinx-doc</a> 把 markdown 文档库转成静态 html 站点<a class="headerlink" href="#sphinx-doc-markdown-html" title="Link to this heading"></a></h1>
+<blockquote>
+<div><p>sphinx-doc 可以把 markdown 文件无侵入地转成静态的 html。静态文件可以放到自己的服务器和 cdn 静态站点上；也可以同过 github page 托管，通过 <code class="docutils literal notranslate"><span class="pre">&lt;github-user&gt;.github.com</span></code></p>
+<p>配合使用 .rst 文件，可以生成和目录结构相对应的文档导航树。</p>
+</div></blockquote>
+<section id="sphinx-doc">
+<h2><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/installation.html">安装 sphinx-doc</a><a class="headerlink" href="#sphinx-doc" title="Link to this heading"></a></h2>
+<section id="python">
+<h3>安装 python<a class="headerlink" href="#python" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
+</section>
+<section id="pypi-sphinx-doc">
+<h3>从 PyPI 安装 sphinx-doc<a class="headerlink" href="#pypi-sphinx-doc" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>sphinx
+
+sphinx-build<span class="w"> </span>--version<span class="w"> </span><span class="c1"># 检查是否安装成功</span>
+</pre></div>
+</div>
+</section>
+<section id="myst-parser">
+<h3>安装插件 myst_parser<a class="headerlink" href="#myst-parser" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>myst_parser
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id1">
+<h2>快速开始<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>sphinx-doc<span class="w">  </span><span class="c1"># 创建目录</span>
+<span class="nb">cd</span><span class="w"> </span>sphinx-doc<span class="w"> 	  </span><span class="c1"># 切换到sphinx-doc目录</span>
+sphinx-quickstart<span class="w"> </span><span class="c1"># 在当前目录创建以sphinx doc项目目录</span>
+<span class="w">    </span>&gt;<span class="w"> </span>Separate<span class="w"> </span><span class="nb">source</span><span class="w"> </span>and<span class="w"> </span>build<span class="w"> </span>directories<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>n<span class="o">]</span>:<span class="w"> </span>y
+<span class="w">    </span>&gt;<span class="w"> </span>Project<span class="w"> </span>name:zhangwb1996.github.io
+<span class="w">    </span>&gt;<span class="w"> </span>Author<span class="w"> </span>name<span class="o">(</span>s<span class="o">)</span>:zhangwb1996
+<span class="w">    </span>&gt;<span class="w"> </span>Project<span class="w"> </span>release<span class="w"> </span><span class="o">[]</span>:
+<span class="w">    </span>&gt;<span class="w"> </span>Project<span class="w"> </span>language<span class="w"> </span><span class="o">[</span>en<span class="o">]</span>:zh_CN
+<span class="w">    </span><span class="c1"># 如果当前目录不为空则会进行如下这步操作</span>
+<span class="w">    </span>&gt;<span class="w"> </span>Please<span class="w"> </span>enter<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>file<span class="w"> </span>name,<span class="w"> </span>or<span class="w"> </span>rename<span class="w"> </span>the<span class="w"> </span>existing<span class="w"> </span>file<span class="w"> </span>and<span class="w"> </span>press<span class="w"> </span>Enter<span class="w"> </span><span class="o">[</span>index<span class="o">]</span>:
+ls<span class="w">  </span><span class="c1"># build source make.bat Makefile</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>配置文件<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<section id="source-conf-py">
+<h3>source/conf.py<a class="headerlink" href="#source-conf-py" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#general-configuration">配置说明参考官方文档</a></p></li>
+<li><p><a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html">html_theme_options</a></p></li>
+</ul>
+<p>conf.py 文件显示了刚才创建项目时的配置内容，现在如下进行修改。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;zhangwb1996.github.io&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2023, zhangwb1996&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;zhangwb1996&#39;</span>
+
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;myst_parser&#39;</span><span class="p">]</span> 	<span class="c1"># 启用myst_parser插件</span>
+
+<span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_templates&#39;</span><span class="p">]</span>
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[]</span> 		<span class="c1"># 生成html时，排除的文件或目录</span>
+
+<span class="n">language</span> <span class="o">=</span> <span class="s1">&#39;zh_CN&#39;</span>
+
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span> <span class="c1"># html主题</span>
+<span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+
+<span class="c1"># 添加</span>
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;collapse_navigation&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;collapse_navigation&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;sticky_navigation&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;navigation_depth&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="s1">&#39;includehidden&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;titles_only&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">html_last_updated_fmt</span> <span class="o">=</span> <span class="s2">&quot;%b </span><span class="si">%d</span><span class="s2">, %Y&quot;</span>
+<span class="n">html_split_index</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="n">html_show_sourcelink</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+</section>
+<section id="index-rst">
+<h3>index.rst<a class="headerlink" href="#index-rst" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>新建 index.rst：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#新建 index.rst</span>
+touch<span class="w"> </span>my-notes/index.rst<span class="w"> 	</span><span class="c1"># linux</span>
+<span class="nb">type</span><span class="w"> </span>NUL<span class="w"> </span>&gt;<span class="w"> </span>my-notes/index.rst<span class="w"> 	</span><span class="c1"># windows</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>my-notes：markdown 文档库目录，是 source 的子目录。</p></li>
+<li><p>index.rst：<strong>用于生成目录结构</strong>，如果需要生成全部目录结构，则每个子目录下都需要以个 index.rst 文件。</p></li>
+</ul>
+<ul>
+<li><p>子目录的每个 index.rst 配置内容大致分为两种。</p>
+<ul>
+<li><p>嵌套目录：my-notes/index</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c++<span class="w">                     </span><span class="c1"># 页面标题，必填</span>
+<span class="o">=====================================</span>
+..<span class="w"> </span>toctree::
+<span class="w">   </span>:hidden:
+<span class="w">   </span>:glob:<span class="w">               </span><span class="c1"># 抓取指令</span>
+
+<span class="w">   </span>c++程序设计语言/index<span class="w"> </span><span class="c1"># 子目录-c++程序设计语言的index.rst</span>
+<span class="w">   </span>c++11/index<span class="w">          </span><span class="c1"># 子目录-c++11的index.rst</span>
+<span class="w">   </span>c++17/index<span class="w">          </span><span class="c1"># 子目录-c++17的index.rst</span>
+<span class="w">   </span>*<span class="w">                    </span><span class="c1"># 当前目录下的所有文件</span>
+
+<span class="w">   </span><span class="c1"># 如果c++11目录下全是文件，而且不想生成c++11目录结构</span>
+<span class="w">   </span>c++11/*
+</pre></div>
+</div>
+</li>
+<li><p>只有文件：index.rst</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c++11
+<span class="o">=====================================</span>
+..<span class="w"> </span>toctree::
+<span class="w">   </span>:hidden:
+<span class="w">   </span>:glob:<span class="w">               </span><span class="c1"># 抓取指令</span>
+
+<span class="w">   </span>*<span class="w">                    </span><span class="c1"># 当前目录下的所有文件</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>source/index.rst 配置如下：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>source/index.rst
+<span class="o">=====================================</span>
+
+..<span class="w"> </span>toctree::
+<span class="w">   </span>:maxdepth:<span class="w"> </span><span class="m">2</span>
+<span class="w">   </span>:hidden:
+
+<span class="w">   </span>/my-notes/index<span class="w"> </span><span class="c1"># 此处是相对路径，也可以配置成绝对路径</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="html">
+<h2>生成静态 html<a class="headerlink" href="#html" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>·······/sphinx-doc&gt;<span class="w"> </span>make<span class="w"> </span>clean<span class="w"> </span><span class="c1"># 当文档改变对html的影响时全局时，需要先clean</span>
+
+·······/sphinx-doc&gt;<span class="w"> </span>make<span class="w"> </span>html
+</pre></div>
+</div>
+<p>生成的静态文件在 source/build/html 目录下</p>
+</section>
+<section id="githubpagegithub-io">
+<h2>githubpage、github.io<a class="headerlink" href="#githubpagegithub-io" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>在 github 新建一个 <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;.github.io</span> </code>仓库，仓库名需要与 github 的用户名一致</p></li>
+<li><p>在 source/build/html 路径下添加 .nojekyll 文件</p></li>
+<li><p>使用 git 管理 html 目录，并且关联至远程仓库 <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;.github.io</span> </code></p></li>
+<li><p>push</p></li>
+</ol>
+<section id="id3">
+<h3>注意事项<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> 命令会将整个 build 目录（即包括 .nojekyll 文件和 .git 目录）；并且也会 为了避免这种情况，可以自己写一个脚本，手动删除。
+windows 的 bat 脚本 clean.bat 如下：</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="c1">REM clean.bat</span>
+
+<span class="k">cd</span> build
+<span class="k">rmdir</span> doctrees /Q /S
+
+<span class="k">cd</span> html
+<span class="p">@</span><span class="c1">REM rm -r -force *</span>
+<span class="p">@</span><span class="c1">REM rmdir -r -force *</span>
+<span class="k">del</span> -r -force * /Q
+<span class="k">rmdir</span>  my-notes /Q /S
+<span class="k">rmdir</span>  _static /Q /S
+<span class="k">rmdir</span>  _sources /Q /S
+<span class="k">rmdir</span>  _images /Q /S
+
+<span class="p">@</span><span class="c1">REM 生成 .nojekyll 和 .gitignore</span>
+<span class="k">type</span> NUL <span class="p">&gt;</span> .nojekyll
+<span class="k">type</span> NUL <span class="p">&gt;</span> .gitignore
+<span class="p">@</span><span class="c1">REM _sources不是web构建的必须目录，可以在git中忽略</span>
+<span class="k">echo</span> _sources <span class="p">&gt;</span> .gitignore
+</pre></div>
+</div>
+<p>当我们需要重新<code class="docutils literal notranslate"><span class="pre">make</span></code>的时候，先执行<code class="docutils literal notranslate"><span class="pre">./clean</span></code>，再执行<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>，最后把 html 仓库推送到<code class="docutils literal notranslate"><span class="pre">&lt;username&gt;.github.io</span> </code></p>
+</li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="index.html" class="btn btn-neutral float-left" title="其他" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../about.html" class="btn btn-neutral float-right" title="About" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2023, lnvokerr。
+      <span class="lastupdated">最后更新于 10月 19, 2023.
+      </span></p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
