@@ -78,8 +78,15 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">git push 后，自动拉取仓库源码，自动部署</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id1">1、简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id2">2、流程</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#remote-repo">2.1 配置远程仓库新建 remote-repo 仓库</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#local-repo">2.2 本地仓库 local repo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id3">2.1 远程仓库</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#remote-repo-target-repo">2.1.1 remote-repo 和 target-repo</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#post-update">2.1.2 post_update 文件</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#local-repo">2.2 本地仓库 local-repo</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#remote">2.2.1 添加 remote</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -146,14 +153,16 @@
 <li class="toctree-l4"><a class="reference internal" href="../%E5%85%B6%E4%BB%96/%E4%BD%BF%E7%94%A8sphinx-doc%E6%8A%8Amarkdown%E6%96%87%E6%A1%A3%E5%BA%93%E8%BD%AC%E6%88%90%E9%9D%99%E6%80%81%E7%9A%84html%E7%AB%99%E7%82%B9.html#id1">快速开始</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../%E5%85%B6%E4%BB%96/%E4%BD%BF%E7%94%A8sphinx-doc%E6%8A%8Amarkdown%E6%96%87%E6%A1%A3%E5%BA%93%E8%BD%AC%E6%88%90%E9%9D%99%E6%80%81%E7%9A%84html%E7%AB%99%E7%82%B9.html#id2">配置文件</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../%E5%85%B6%E4%BB%96/%E4%BD%BF%E7%94%A8sphinx-doc%E6%8A%8Amarkdown%E6%96%87%E6%A1%A3%E5%BA%93%E8%BD%AC%E6%88%90%E9%9D%99%E6%80%81%E7%9A%84html%E7%AB%99%E7%82%B9.html#source-conf-py">source/conf.py</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../%E5%85%B6%E4%BB%96/%E4%BD%BF%E7%94%A8sphinx-doc%E6%8A%8Amarkdown%E6%96%87%E6%A1%A3%E5%BA%93%E8%BD%AC%E6%88%90%E9%9D%99%E6%80%81%E7%9A%84html%E7%AB%99%E7%82%B9.html#index-rst">index.rst</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../%E5%85%B6%E4%BB%96/%E4%BD%BF%E7%94%A8sphinx-doc%E6%8A%8Amarkdown%E6%96%87%E6%A1%A3%E5%BA%93%E8%BD%AC%E6%88%90%E9%9D%99%E6%80%81%E7%9A%84html%E7%AB%99%E7%82%B9.html#index-rst">index.rst</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../%E5%85%B6%E4%BB%96/%E4%BD%BF%E7%94%A8sphinx-doc%E6%8A%8Amarkdown%E6%96%87%E6%A1%A3%E5%BA%93%E8%BD%AC%E6%88%90%E9%9D%99%E6%80%81%E7%9A%84html%E7%AB%99%E7%82%B9.html#my-notes-index-rst">my-notes 及其子目录 下的 index.rst</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../%E5%85%B6%E4%BB%96/%E4%BD%BF%E7%94%A8sphinx-doc%E6%8A%8Amarkdown%E6%96%87%E6%A1%A3%E5%BA%93%E8%BD%AC%E6%88%90%E9%9D%99%E6%80%81%E7%9A%84html%E7%AB%99%E7%82%B9.html#source-index-rst">source/index.rst</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="../%E5%85%B6%E4%BB%96/%E4%BD%BF%E7%94%A8sphinx-doc%E6%8A%8Amarkdown%E6%96%87%E6%A1%A3%E5%BA%93%E8%BD%AC%E6%88%90%E9%9D%99%E6%80%81%E7%9A%84html%E7%AB%99%E7%82%B9.html#html">生成静态 html</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../%E5%85%B6%E4%BB%96/%E4%BD%BF%E7%94%A8sphinx-doc%E6%8A%8Amarkdown%E6%96%87%E6%A1%A3%E5%BA%93%E8%BD%AC%E6%88%90%E9%9D%99%E6%80%81%E7%9A%84html%E7%AB%99%E7%82%B9.html#githubpagegithub-io">githubpage、github.io</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../%E5%85%B6%E4%BB%96/%E4%BD%BF%E7%94%A8sphinx-doc%E6%8A%8Amarkdown%E6%96%87%E6%A1%A3%E5%BA%93%E8%BD%AC%E6%88%90%E9%9D%99%E6%80%81%E7%9A%84html%E7%AB%99%E7%82%B9.html#id3">注意事项</a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="../%E5%85%B6%E4%BB%96/%E4%BD%BF%E7%94%A8sphinx-doc%E6%8A%8Amarkdown%E6%96%87%E6%A1%A3%E5%BA%93%E8%BD%AC%E6%88%90%E9%9D%99%E6%80%81%E7%9A%84html%E7%AB%99%E7%82%B9.html#githubpagegithub-io">githubpage、github.io</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../%E5%85%B6%E4%BB%96/%E4%BD%BF%E7%94%A8sphinx-doc%E6%8A%8Amarkdown%E6%96%87%E6%A1%A3%E5%BA%93%E8%BD%AC%E6%88%90%E9%9D%99%E6%80%81%E7%9A%84html%E7%AB%99%E7%82%B9.html#id3">注意事项</a></li>
 </ul>
 </li>
 </ul>
@@ -204,10 +213,10 @@
 </section>
 <section id="id2">
 <h2>2、流程<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
-<section id="remote-repo">
-<h3>2.1 配置远程仓库新建 remote-repo 仓库<a class="headerlink" href="#remote-repo" title="Link to this heading"></a></h3>
-<ol class="arabic">
-<li><p>远程仓库 remote-repo 和 target-repo</p>
+<section id="id3">
+<h3>2.1 远程仓库<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<section id="remote-repo-target-repo">
+<h4>2.1.1 remote-repo 和 target-repo<a class="headerlink" href="#remote-repo-target-repo" title="Link to this heading"></a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># remote-repo</span>
 git<span class="w"> </span>init<span class="w"> </span>remote-repo<span class="w"> </span>--bare
 <span class="c1"># target-repo</span>
@@ -221,14 +230,18 @@ ls
 假设 target-repo 是 web 项目文件，通过 nginx 代理。可以使用 <code class="docutils literal notranslate"><span class="pre">usermod</span></code>把 git 用户添加到 www-data 用户组： <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">usermod</span> <span class="pre">-a</span> <span class="pre">-G</span> <span class="pre">git</span> <span class="pre">www-data</span></code>。</p></li>
 <li><p>也可以 <code class="docutils literal notranslate"><span class="pre">useradd</span></code> 新建一个属于 www-data 组的用户，然后手动切换用户并执行编译重启。</p></li>
 </ul>
-</li>
+</section>
+<section id="post-update">
+<h4>2.1.2 post_update 文件<a class="headerlink" href="#post-update" title="Link to this heading"></a></h4>
+<ol class="arabic">
 <li><p>复制 post_update 文件</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>remote-repo/hook
 cp<span class="w"> </span>post_update.sample<span class="w"> </span>post_update
 chmod<span class="w"> </span>u+x<span class="w"> </span>post_update<span class="w"> </span><span class="c1"># 给post_update添加可执行权限x</span>
 </pre></div>
 </div>
-<p>编辑 post_update</p>
+</li>
+<li><p>编辑 post_update</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#判断是不是远端仓库</span>
 <span class="nv">IS_BARE</span><span class="o">=</span><span class="k">$(</span>git<span class="w"> </span>rev-parse<span class="w"> </span>--is-bare-repository<span class="k">)</span>
 <span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IS_BARE</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
@@ -249,8 +262,11 @@ git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </
 </li>
 </ol>
 </section>
+</section>
 <section id="local-repo">
-<h3>2.2 本地仓库 local repo<a class="headerlink" href="#local-repo" title="Link to this heading"></a></h3>
+<h3>2.2 本地仓库 local-repo<a class="headerlink" href="#local-repo" title="Link to this heading"></a></h3>
+<section id="remote">
+<h4>2.2.1 添加 remote<a class="headerlink" href="#remote" title="Link to this heading"></a></h4>
 <ol class="arabic">
 <li><p>修改.git/config 文件，有两种方式，不熟悉 config 配置可以使用 git 命令</p>
 <ul>
@@ -268,7 +284,7 @@ git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </
 </pre></div>
 </div>
 </li>
-<li><p>git 命令</p>
+<li><p>或者使用 git 命令</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>&lt;remote-name&gt;<span class="w"> </span>&lt;remote-url&gt;
 </pre></div>
 </div>
@@ -281,6 +297,7 @@ git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </
 </div>
 </li>
 </ol>
+</section>
 </section>
 </section>
 </section>

@@ -78,8 +78,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html">git push 后，自动拉取仓库源码，自动部署</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#id1">1、简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#id2">2、流程</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#remote-repo">2.1 配置远程仓库新建 remote-repo 仓库</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#local-repo">2.2 本地仓库 local repo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#id3">2.1 远程仓库</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#remote-repo-target-repo">2.1.1 remote-repo 和 target-repo</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#post-update">2.1.2 post_update 文件</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#local-repo">2.2 本地仓库 local-repo</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../git/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#remote">2.2.1 添加 remote</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -146,7 +153,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#id1">快速开始</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id2">配置文件</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#source-conf-py">source/conf.py</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#index-rst">index.rst</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#index-rst">index.rst</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#my-notes-index-rst">my-notes 及其子目录 下的 index.rst</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#source-index-rst">source/index.rst</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#html">生成静态 html</a></li>
@@ -220,7 +231,7 @@ sphinx-build<span class="w"> </span>--version<span class="w"> </span><span class
 <h2>快速开始<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>sphinx-doc<span class="w">  </span><span class="c1"># 创建目录</span>
 <span class="nb">cd</span><span class="w"> </span>sphinx-doc<span class="w"> 	  </span><span class="c1"># 切换到sphinx-doc目录</span>
-sphinx-quickstart<span class="w"> </span><span class="c1"># 在当前目录创建以sphinx doc项目目录</span>
+sphinx-quickstart<span class="w"> </span><span class="c1"># 在当前目录创建sphinx doc项目</span>
 <span class="w">    </span>&gt;<span class="w"> </span>Separate<span class="w"> </span><span class="nb">source</span><span class="w"> </span>and<span class="w"> </span>build<span class="w"> </span>directories<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span><span class="w"> </span><span class="o">[</span>n<span class="o">]</span>:<span class="w"> </span>y
 <span class="w">    </span>&gt;<span class="w"> </span>Project<span class="w"> </span>name:zhangwb1996.github.io
 <span class="w">    </span>&gt;<span class="w"> </span>Author<span class="w"> </span>name<span class="o">(</span>s<span class="o">)</span>:zhangwb1996
@@ -280,21 +291,21 @@ ls<span class="w">  </span><span class="c1"># build source make.bat Makefile</sp
 </section>
 <section id="index-rst">
 <h3>index.rst<a class="headerlink" href="#index-rst" title="Link to this heading"></a></h3>
-<ol class="arabic">
-<li><p>新建 index.rst：</p>
+<section id="my-notes-index-rst">
+<h4>my-notes 及其子目录 下的 index.rst<a class="headerlink" href="#my-notes-index-rst" title="Link to this heading"></a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#新建 index.rst</span>
 touch<span class="w"> </span>my-notes/index.rst<span class="w"> 	</span><span class="c1"># linux</span>
 <span class="nb">type</span><span class="w"> </span>NUL<span class="w"> </span>&gt;<span class="w"> </span>my-notes/index.rst<span class="w"> 	</span><span class="c1"># windows</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>my-notes：markdown 文档库目录，是 source 的子目录。</p></li>
+<li><p><strong>my-notes：markdown 文档库目录，是 source 的子目录。</strong></p></li>
 <li><p>index.rst：<strong>用于生成目录结构</strong>，如果需要生成全部目录结构，则每个子目录下都需要以个 index.rst 文件。</p></li>
 </ul>
 <ul>
 <li><p>子目录的每个 index.rst 配置内容大致分为两种。</p>
 <ul>
-<li><p>嵌套目录：my-notes/index</p>
+<li><p>嵌套目录：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c++<span class="w">                     </span><span class="c1"># 页面标题，必填</span>
 <span class="o">=====================================</span>
 ..<span class="w"> </span>toctree::
@@ -311,7 +322,7 @@ touch<span class="w"> </span>my-notes/index.rst<span class="w"> 	</span><span cl
 </pre></div>
 </div>
 </li>
-<li><p>只有文件：index.rst</p>
+<li><p>只有文件：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c++11
 <span class="o">=====================================</span>
 ..<span class="w"> </span>toctree::
@@ -325,8 +336,9 @@ touch<span class="w"> </span>my-notes/index.rst<span class="w"> 	</span><span cl
 </ul>
 </li>
 </ul>
-</li>
-<li><p>source/index.rst 配置如下：</p>
+</section>
+<section id="source-index-rst">
+<h4>source/index.rst<a class="headerlink" href="#source-index-rst" title="Link to this heading"></a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>source/index.rst
 <span class="o">=====================================</span>
 
@@ -337,8 +349,7 @@ touch<span class="w"> </span>my-notes/index.rst<span class="w"> 	</span><span cl
 <span class="w">   </span>/my-notes/index<span class="w"> </span><span class="c1"># 此处是相对路径，也可以配置成绝对路径</span>
 </pre></div>
 </div>
-</li>
-</ol>
+</section>
 </section>
 </section>
 <section id="html">
@@ -385,7 +396,7 @@ windows 的 bat 脚本 clean.bat 如下：</p>
 <span class="k">echo</span> _sources <span class="p">&gt;</span> .gitignore
 </pre></div>
 </div>
-<p>当我们需要重新<code class="docutils literal notranslate"><span class="pre">make</span></code>的时候，先执行<code class="docutils literal notranslate"><span class="pre">./clean</span></code>，再执行<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>，最后把 html 仓库推送到<code class="docutils literal notranslate"><span class="pre">&lt;username&gt;.github.io</span> </code></p>
+<p>当我们需要重新 <code class="docutils literal notranslate"><span class="pre">make</span></code>的时候，先执行 <code class="docutils literal notranslate"><span class="pre">./clean</span></code>，再执行 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>，最后把 html 仓库推送到 <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;.github.io</span> </code></p>
 </li>
 </ol>
 </section>
