@@ -17,6 +17,40 @@
         <script src="../../_static/documentation_options.js?v=7d86a446"></script>
         <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "zhangwb1996/zhangwb1996.github.io.git");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
         <script src="../../_static/translations.js?v=beaddf03"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
@@ -375,7 +409,7 @@ touch<span class="w"> </span>my-notes/index.rst<span class="w"> 	</span><span cl
 <section id="id3">
 <h2>注意事项<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
 <ol class="arabic">
-<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> 命令会将整个 build 目录（即包括 .nojekyll 文件和 .git 目录）；并且也会 为了避免这种情况，可以自己写一个脚本，手动删除。
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> 命令会将整个 build 目录（包括 .nojekyll 文件和 .git 目录）清空；为了避免这种情况，可以自己写一个脚本，手动删除。
 windows 的 bat 脚本 clean.bat 如下：</p>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="c1">REM clean.bat</span>
 
@@ -416,7 +450,7 @@ windows 的 bat 脚本 clean.bat 如下：</p>
 
   <div role="contentinfo">
     <p>&#169; 版权所有 2023, lnvokerr。
-      <span class="lastupdated">最后更新于 10月 19, 2023.
+      <span class="lastupdated">最后更新于 10月 21, 2023.
       </span></p>
   </div>
 
