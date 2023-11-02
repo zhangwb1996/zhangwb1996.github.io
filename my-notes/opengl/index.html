@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>git &mdash; zhangwb1996.github.io&lt;br&gt;lnvokerr&#39;s notes  文档</title>
+  <title>opengl &mdash; zhangwb1996.github.io&lt;br&gt;lnvokerr&#39;s notes  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/assets/custom.css" type="text/css" />
@@ -55,8 +55,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="git push 后，自动拉取仓库源码，自动部署" href="blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html" />
-    <link rel="prev" title="test" href="../test/test.html" /> 
+    <link rel="next" title="GLFW 显示中文标题" href="GLFW%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87%E6%A0%87%E9%A2%98.html" />
+    <link rel="prev" title="ssl" href="../nginx/ssl.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -79,7 +79,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Notes</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Notes</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../c%2B%2B/index.html">c++</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../c%2B%2B/c%2B%2B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/index.html">c++程序设计语言</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../c%2B%2B/c%2B%2B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/%E4%BA%8C%E3%80%81C%2B%2B%E6%A6%82%E8%A7%88%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">二、C++概览：基础知识</a><ul class="simple">
@@ -124,8 +124,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li class="toctree-l3"><a class="reference internal" href="../database/redis/index.html">redis</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html">git</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="notes/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html">git 常用命令</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git/index.html">git</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../git/notes/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html">git 常用命令</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../linux/index.html">linux</a><ul>
@@ -172,8 +172,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../opengl/index.html">opengl</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../opengl/GLFW%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87%E6%A0%87%E9%A2%98.html">GLFW 显示中文标题</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">opengl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GLFW%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87%E6%A0%87%E9%A2%98.html">GLFW 显示中文标题</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../test/index.html">test</a><ul>
@@ -182,18 +182,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html#blogs">Blogs</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">git</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html">git push 后，自动拉取仓库源码，自动部署</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#id1">1、简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#id2">2、流程</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#id3">2.1 远程仓库</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#remote-repo-target-repo">2.1.1 remote-repo 和 target-repo</a></li>
-<li class="toctree-l6"><a class="reference internal" href="blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#post-update">2.1.2 post_update 文件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#blogs">Blogs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../git/blogs.html">git</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../git/blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html">git push 后，自动拉取仓库源码，自动部署</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../git/blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#id1">1、简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../git/blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#id2">2、流程</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../git/blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#id3">2.1 远程仓库</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../git/blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#remote-repo-target-repo">2.1.1 remote-repo 和 target-repo</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../git/blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#post-update">2.1.2 post_update 文件</a></li>
 </ul>
 </li>
-<li class="toctree-l5"><a class="reference internal" href="blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#local-repo">2.2 本地仓库 local-repo</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#remote">2.2.1 添加 remote</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../git/blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#local-repo">2.2 本地仓库 local-repo</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../git/blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html#remote">2.2.1 添加 remote</a></li>
 </ul>
 </li>
 </ul>
@@ -247,7 +247,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Notes</a></li>
-      <li class="breadcrumb-item active">git</li>
+      <li class="breadcrumb-item active">opengl</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -256,8 +256,8 @@ commentsRunWhenDOMLoaded(addUtterances);
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="git">
-<h1>git<a class="headerlink" href="#git" title="Link to this heading"></a></h1>
+  <section id="opengl">
+<h1>opengl<a class="headerlink" href="#opengl" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -266,8 +266,8 @@ commentsRunWhenDOMLoaded(addUtterances);
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="../test/test.html" class="btn btn-neutral float-left" title="test" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="blogs/git%20push%20%E5%90%8E%EF%BC%8C%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%93%E5%BA%93%E6%BA%90%E7%A0%81%EF%BC%8C%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2.html" class="btn btn-neutral float-right" title="git push 后，自动拉取仓库源码，自动部署" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../nginx/ssl.html" class="btn btn-neutral float-left" title="ssl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="GLFW%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87%E6%A0%87%E9%A2%98.html" class="btn btn-neutral float-right" title="GLFW 显示中文标题" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
