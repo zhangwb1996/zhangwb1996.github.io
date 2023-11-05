@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>继承一个参数和多个参数的构造函数 &mdash; zhangwb1996.github.io&lt;br&gt;lnvokerr&#39;s notes  文档</title>
+  <title>继承——构造函数 &mdash; zhangwb1996.github.io&lt;br&gt;lnvokerr&#39;s notes  文档</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/assets/custom.css" type="text/css" />
@@ -105,7 +105,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">c++ issues</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">继承一个参数和多个参数的构造函数</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">继承——构造函数</a></li>
 <li class="toctree-l4"><a class="reference internal" href="%E9%80%9A%E8%BF%87gdb%E5%AE%9A%E4%BD%8D%E6%AE%B5%E9%94%99%E8%AF%AF%E7%9A%84%E4%BD%8D%E7%BD%AE.html">通过 gdb 定位段错误的位置.md</a></li>
 </ul>
 </li>
@@ -249,7 +249,7 @@ commentsRunWhenDOMLoaded(addUtterances);
           <li class="breadcrumb-item"><a href="../../index.html">Notes</a></li>
           <li class="breadcrumb-item"><a href="../index.html">c++</a></li>
           <li class="breadcrumb-item"><a href="index.html">c++ issues</a></li>
-      <li class="breadcrumb-item active">继承一个参数和多个参数的构造函数</li>
+      <li class="breadcrumb-item active">继承——构造函数</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -259,9 +259,8 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>继承一个参数和多个参数的构造函数<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
-<p>只有一个参数的父类构造函数，可以直接调用；</p>
-<p>有多个参数的父类构造函数，需要显示调用：</p>
+<h1>继承——构造函数<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p>显示父类构造函数调用：</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="w"> </span><span class="o">:</span><span class="k">public</span><span class="w"> </span><span class="n">Base</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">public</span><span class="o">:</span>
