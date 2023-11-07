@@ -260,10 +260,8 @@ commentsRunWhenDOMLoaded(addUtterances);
              
   <section id="sphinx-doc-markdown-html">
 <h1>使用 <a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/configuration.html#">sphinx-doc</a> 把 markdown 文档库转成静态 html 站点<a class="headerlink" href="#sphinx-doc-markdown-html" title="Link to this heading"></a></h1>
-<blockquote>
-<div><p>sphinx-doc 可以把 markdown 文件无侵入地转成静态的 html。静态文件可以放到自己的服务器和 cdn 静态站点上；也可以同过 github page 托管，通过 <code class="docutils literal notranslate"><span class="pre">&lt;github-user&gt;.github.com</span></code></p>
+<p>sphinx-doc 可以把 markdown 文件无侵入地转成静态的 html。静态文件可以放到自己的服务器和 cdn 静态站点上；也可以通过 github page 托管到 <code class="docutils literal notranslate"><span class="pre">&lt;github-user&gt;.github.com</span></code></p>
 <p>配合使用 .rst 文件，可以生成和目录结构相对应的文档导航树。</p>
-</div></blockquote>
 <section id="sphinx-doc">
 <h2><a class="reference external" href="https://www.sphinx-doc.org/zh_CN/master/usage/installation.html">安装 sphinx-doc</a><a class="headerlink" href="#sphinx-doc" title="Link to this heading"></a></h2>
 <section id="python">
@@ -430,14 +428,10 @@ touch<span class="w"> </span>my-notes/index.rst<span class="w"> 	</span><span cl
 </section>
 <section id="id3">
 <h2>注意事项<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
-<ol class="arabic">
-<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> 命令会将整个 build 目录（包括 .nojekyll 文件和 .git 目录）清空；为了避免这种情况，可以自己写一个脚本，手动删除。
-windows 的 bat 脚本 clean.bat 如下：</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> 命令会将整个 build 目录（包括 .nojekyll 文件和 .git 目录）清空；为了避免这种情况，可以自己写一个脚本，手动删除。windows 的 bat 脚本 clean.bat 如下：</p>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="c1">REM clean.bat</span>
-
 <span class="k">cd</span> build
 <span class="k">rmdir</span> doctrees /Q /S
-
 <span class="k">cd</span> html
 <span class="p">@</span><span class="c1">REM rm -r -force *</span>
 <span class="p">@</span><span class="c1">REM rmdir -r -force *</span>
@@ -455,8 +449,6 @@ windows 的 bat 脚本 clean.bat 如下：</p>
 </pre></div>
 </div>
 <p>当我们需要重新 <code class="docutils literal notranslate"><span class="pre">make</span></code>的时候，先执行 <code class="docutils literal notranslate"><span class="pre">./clean</span></code>，再执行 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>，最后把 html 仓库推送到 <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;.github.io</span> </code></p>
-</li>
-</ol>
 </section>
 </section>
 
@@ -476,7 +468,7 @@ windows 的 bat 脚本 clean.bat 如下：</p>
         创建时间: 2023-10-18 20:38:03
     </small>
     <small id="mtime-bak">
-        上一次修改: 2023-10-21 10:07:29
+        上一次修改: 2023-11-07 17:40:48
     </small>
 </div>
 
