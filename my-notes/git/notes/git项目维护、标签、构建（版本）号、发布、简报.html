@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>git 常用命令 &mdash; zhangwb1996.github.io&lt;br&gt;lnvokerr just go ahead  文档</title>
+  <title>git 项目维护、标签、构建（版本）号、发布、简报 &mdash; zhangwb1996.github.io&lt;br&gt;lnvokerr just go ahead  文档</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/assets/custom.css" type="text/css" />
@@ -57,8 +57,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
-    <link rel="next" title="git 项目维护、标签、构建（版本）号、发布、简报" href="git%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E6%9E%84%E5%BB%BA%EF%BC%88%E7%89%88%E6%9C%AC%EF%BC%89%E5%8F%B7%E3%80%81%E5%8F%91%E5%B8%83%E3%80%81%E7%AE%80%E6%8A%A5.html" />
-    <link rel="prev" title="git" href="../index.html" /> 
+    <link rel="next" title="linux" href="../../linux/index.html" />
+    <link rel="prev" title="git 常用命令" href="git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -146,15 +146,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">git</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">git 常用命令</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">统计代码行数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html">git 常用命令</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html#id1">统计代码行数</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="git%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E6%9E%84%E5%BB%BA%EF%BC%88%E7%89%88%E6%9C%AC%EF%BC%89%E5%8F%B7%E3%80%81%E5%8F%91%E5%B8%83%E3%80%81%E7%AE%80%E6%8A%A5.html">git 项目维护、标签、构建（版本）号、发布、简报</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="git%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E6%9E%84%E5%BB%BA%EF%BC%88%E7%89%88%E6%9C%AC%EF%BC%89%E5%8F%B7%E3%80%81%E5%8F%91%E5%B8%83%E3%80%81%E7%AE%80%E6%8A%A5.html#id1">为发布打标签</a></li>
-<li class="toctree-l4"><a class="reference internal" href="git%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E6%9E%84%E5%BB%BA%EF%BC%88%E7%89%88%E6%9C%AC%EF%BC%89%E5%8F%B7%E3%80%81%E5%8F%91%E5%B8%83%E3%80%81%E7%AE%80%E6%8A%A5.html#id2">生成一个构建号</a></li>
-<li class="toctree-l4"><a class="reference internal" href="git%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E6%9E%84%E5%BB%BA%EF%BC%88%E7%89%88%E6%9C%AC%EF%BC%89%E5%8F%B7%E3%80%81%E5%8F%91%E5%B8%83%E3%80%81%E7%AE%80%E6%8A%A5.html#id3">准备一次发布</a></li>
-<li class="toctree-l4"><a class="reference internal" href="git%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E6%9E%84%E5%BB%BA%EF%BC%88%E7%89%88%E6%9C%AC%EF%BC%89%E5%8F%B7%E3%80%81%E5%8F%91%E5%B8%83%E3%80%81%E7%AE%80%E6%8A%A5.html#id4">制作提交简报</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">git 项目维护、标签、构建（版本）号、发布、简报</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">为发布打标签</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">生成一个构建号</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">准备一次发布</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">制作提交简报</a></li>
 </ul>
 </li>
 </ul>
@@ -279,7 +279,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../index.html">Notes</a></li>
           <li class="breadcrumb-item"><a href="../index.html">git</a></li>
-      <li class="breadcrumb-item active">git 常用命令</li>
+      <li class="breadcrumb-item active">git 项目维护、标签、构建（版本）号、发布、简报</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -289,14 +289,64 @@ commentsRunWhenDOMLoaded(addUtterances);
            <div itemprop="articleBody">
              
   <section id="git">
-<h1>git 常用命令<a class="headerlink" href="#git" title="Link to this heading"></a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> : 显示 commit 记录</p>
-<p><code class="docutils literal notranslate"><span class="pre">GIT_DIR</span></code> 是 .git 目录的位置。 如果这个没有设置， Git 会按照目录树逐层向上查找 .git 目录，直到到达 ~或 /。</p>
+<h1>git 项目维护、标签、构建（版本）号、发布、简报<a class="headerlink" href="#git" title="Link to this heading"></a></h1>
+<blockquote>
+<div><p>progit-zh.pdf P160</p>
+</div></blockquote>
 <section id="id1">
-<h2>统计代码行数<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>ls-files<span class="w"> </span>--<span class="w"> </span><span class="s1">&#39;*.cpp&#39;</span><span class="w"> </span><span class="s1">&#39;*.h&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>wc<span class="w"> </span>-l<span class="w">     </span><span class="c1"># 对应后缀的文件</span>
+<h2>为发布打标签<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 后期根据特定提交历史‘9fceb02’打标签</span>
+git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v0.1.0<span class="w"> </span>9fceb02
 
-git<span class="w"> </span>ls-files<span class="w"> </span>--<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>wc<span class="w"> </span>-l<span class="w">                   </span><span class="c1"># 全部 track 的文件</span>
+<span class="c1"># 当前分支打标签</span>
+git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v0.1.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;v0.1.0版本&quot;</span>
+
+<span class="c1"># 共享标签，把标签显示上传到远程仓库</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;tagname&gt;
+
+<span class="c1"># 删除标签</span>
+<span class="c1"># checkout标签</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>生成一个构建号<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 标签名-自该标签之后的提交数目-你所描述的提交的部分 SHA-1 值（前缀的 g 表示 Git）</span>
+$<span class="w"> </span>git<span class="w"> </span>describe<span class="w"> </span>master
+v1.6.2-rc1-20-g8c5b85c
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>准备一次发布<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>在一个 project 目录中得到你项目的最新快照</p>
+<p><strong>tar 压缩包</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>archive<span class="w"> </span>main<span class="w"> </span>-prefix<span class="o">=</span><span class="s2">&quot;project.&quot;</span><span class="sb">`</span>git<span class="w"> </span>describe<span class="w"> </span>main<span class="sb">`</span><span class="s2">&quot;/&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>&gt;<span class="w"> </span><span class="sb">`</span>git<span class="w"> </span>describe<span class="w"> </span>main<span class="sb">`</span>.tar.gz
+$<span class="w"> </span>ls<span class="w"> </span>*.tar.gz
+v1.6.2-rc1-20-g8c5b85c.tar.gz
+</pre></div>
+</div>
+<p><strong>zip 压缩包</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>archive<span class="w"> </span>main<span class="w"> </span>--prefix<span class="o">=</span><span class="s2">&quot;meteor.&quot;</span><span class="sb">`</span>git<span class="w"> </span>describe<span class="w"> </span>main<span class="sb">`</span><span class="s2">&quot;/&quot;</span><span class="w"> </span>--format<span class="o">=</span>zip<span class="w"> </span>&gt;<span class="w"> </span><span class="sb">`</span>git<span class="w"> </span>describe<span class="w"> </span>main<span class="sb">`</span>.zip<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>mv<span class="w"> </span><span class="sb">`</span>git<span class="w"> </span>describe<span class="w"> </span>main<span class="sb">`</span>.zip<span class="w"> </span>archives
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>制作提交简报<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 你的上一次发布名称是 v1.0.1，那么下面的命令可以给出上次发布以来所有提交的总结
+$ git shortlog --no-merges master --not v1.0.1
+Chris Wanstrath (6):
+    Add support for annotated tags to Grit::Tag
+    Add packed-refs annotated tag support.
+    Add Grit::Commit#to_patch
+    Update version and History.txt
+    Remove stray `puts`
+    Make ls_tree ignore nils
+Tom Preston-Werner (4):
+    fix dates in history
+    dynamic version method
+    Version bump to 1.0.2
+    Regenerated gemspec for version 1.0.2
 </pre></div>
 </div>
 </section>
@@ -306,8 +356,8 @@ git<span class="w"> </span>ls-files<span class="w"> </span>--<span class="w"> </
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="../index.html" class="btn btn-neutral float-left" title="git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="git%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E6%9E%84%E5%BB%BA%EF%BC%88%E7%89%88%E6%9C%AC%EF%BC%89%E5%8F%B7%E3%80%81%E5%8F%91%E5%B8%83%E3%80%81%E7%AE%80%E6%8A%A5.html" class="btn btn-neutral float-right" title="git 项目维护、标签、构建（版本）号、发布、简报" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html" class="btn btn-neutral float-left" title="git 常用命令" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../../linux/index.html" class="btn btn-neutral float-right" title="linux" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -315,7 +365,7 @@ git<span class="w"> </span>ls-files<span class="w"> </span>--<span class="w"> </
   <div role="contentinfo">
 <div class="wy-side-footer-info" hidden>
     <small id="ctime-bak">
-        创建时间: 2023-10-19 15:34:22
+        创建时间: 2024-04-22 10:33:55
     </small>
     <small id="mtime-bak">
         上一次修改: 2024-04-22 10:33:55
